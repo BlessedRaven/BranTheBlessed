@@ -1,31 +1,63 @@
-fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd')
-    .then(response => response.json())
-    .then(data => {
-        const ratesDiv = document.getElementById('rates');
-        ratesDiv.innerHTML = `
-            <p>Bitcoin (BTC): $${data.bitcoin.usd}</p>
-            <p>Ethereum (ETH): $${data.ethereum.usd}</p>
-        `;
-    })
-    .catch(error => console.error('Error fetching rates:', error));
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<canvas id="priceChart"></canvas>
-<script>
-fetch('https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7')
-    .then(response => response.json())
-    .then(data => {
-        const ctx = document.getElementById('priceChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: data.prices.map(price => new Date(price[0]).toLocaleDateString()),
-                datasets: [{
-                    label: 'Bitcoin Price (USD)',
-                    data: data.prices.map(price => price[1]),
-                    borderColor: '#f7931a',
-                    fill: false
-                }]
+// Simulated CLEM price data (replace with real API later)
+function fetchClemPrice() {
+    // Simulate fetching CLEM price (e.g., from a custom API or CoinGecko if CLEM were real)
+    const simulatedPrice = (Math.random() * 100 + 50).toFixed(2); // Random price between $50-$150
+    document.getElementById('clem-price').innerText = `CLEM Price: $${simulatedPrice}`;
+}
+
+// Payment method redirects (replace with actual API integrations)
+function buyWithStripe() {
+    window.location.href = 'https://stripe.com'; // Replace with Stripe Checkout link
+}
+
+function buyWithPaypal() {
+    window.location.href = 'https://paypal.com'; // Replace with PayPal payment link
+}
+
+function buyWithCrypto() {
+    window.location.href = 'https://commerce.coinbase.com'; // Replace with Coinbase Commerce link
+}
+
+function buyWithBank() {
+    alert('Bank transfer instructions will be emailed to you.');
+    // Redirect to a custom bank transfer page or form
+}
+
+function buyWithMobile() {
+    window.location.href = 'https://apple.com/apple-pay'; // Replace with Apple Pay/Google Pay link
+}
+
+function buyWithCashApp() {
+    window.location.href = 'https://cash.app'; // Replace with Cash App payment link
+}
+
+// Chart data for CLEM price trend (simulated)
+function loadClemChart() {
+    const ctx = document.getElementById('clemChart').getContext('2d');
+    const prices = Array.from({ length: 7 }, () => Math.random() * 100 + 50); // 7 days of random prices
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
+            datasets: [{
+                label: 'CLEM Price (USD)',
+                data: prices,
+                borderColor: '#10B981',
+                backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { beginAtZero: false }
             }
-        });
+        }
     });
-</script>
+}
+
+// Initialize
+fetchClemPrice();
+loadClemChart();
+setInterval(fetchClemPrice, 5000); // Update price every 5 seconds
