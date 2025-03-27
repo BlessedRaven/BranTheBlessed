@@ -61,3 +61,6 @@ function loadClemChart() {
 fetchClemPrice();
 loadClemChart();
 setInterval(fetchClemPrice, 5000); // Update price every 5 seconds
+function buyWithStripe() {
+    window.location.href = 'https://checkout.stripe.com/pay/your-session-id'; // Replace with real session URL
+}
