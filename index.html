@@ -3,23 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bran The Blessed - Crypto Exchange</title>
+    <title>Bran The Blessed - CLEM Crypto Hub</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Welcome to Bran The Blessed Crypto Exchange</h1>
-        <p>Your guide to cryptocurrency trading</p>
+<body class="bg-gray-900 text-white">
+    <header class="bg-gradient-to-r from-purple-600 to-indigo-600 py-6 text-center">
+        <h1 class="text-4xl font-bold">Bran The Blessed</h1>
+        <p class="text-lg mt-2">Your Gateway to CLEM - The Future of Crypto</p>
     </header>
-    <main>
-        <section id="exchange-info">
-            <h2>Exchange Rates</h2>
-            <div id="rates"></div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- CLEM Spotlight -->
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-semibold mb-4">Introducing CLEM</h2>
+            <p class="text-lg mb-6">CLEM is a revolutionary cryptocurrency designed for speed, security, and accessibility. Buy it now with your preferred payment method!</p>
+            <div id="clem-price" class="text-2xl font-bold text-green-400">Loading CLEM Price...</div>
+        </section>
+
+        <!-- Payment Options -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <h2 class="col-span-full text-2xl font-semibold mb-4 text-center">Buy CLEM with Multiple Methods</h2>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">Credit/Debit Card</h3>
+                <p class="mt-2">Use Visa, Mastercard, or Amex via our secure Stripe integration.</p>
+                <button onclick="buyWithStripe()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">PayPal</h3>
+                <p class="mt-2">Fast and easy payments with PayPal.</p>
+                <button onclick="buyWithPaypal()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">Crypto (BTC, ETH, etc.)</h3>
+                <p class="mt-2">Swap your existing crypto for CLEM via Coinbase Commerce.</p>
+                <button onclick="buyWithCrypto()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">Bank Transfer</h3>
+                <p class="mt-2">Direct bank payments for larger transactions.</p>
+                <button onclick="buyWithBank()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">Apple Pay / Google Pay</h3>
+                <p class="mt-2">Quick mobile payments with your device.</p>
+                <button onclick="buyWithMobile()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">Cash App</h3>
+                <p class="mt-2">Use Cash App for seamless CLEM purchases.</p>
+                <button onclick="buyWithCashApp()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
+            </div>
+        </section>
+
+        <!-- Price Chart -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4 text-center">CLEM Price Trend</h2>
+            <canvas id="clemChart" class="w-full h-64"></canvas>
         </section>
     </main>
+
+    <footer class="bg-gray-800 py-4 text-center">
+        <p>&copy; 2025 Bran The Blessed. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-git add .
-git commit -m "Added chart and info"
-git push origin main
