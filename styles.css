@@ -1,10 +1,20 @@
 /* styles.css */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     line-height: 1.6;
 }
 
-/* Custom hover effects or overrides if needed */
+input, button {
+    transition: all 0.3s ease;
+}
+
 button:hover {
-    transition: background-color 0.3s ease;
+    transform: scale(1.05);
+}
+
+#trade-list .trade-card {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ecc94b;
 }
