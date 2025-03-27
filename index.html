@@ -3,74 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bran The Blessed - CLEM Crypto Hub</title>
+    <title>Bran The Blessed | CLEM Crypto & OSRS Trades</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white">
-    <header class="bg-gradient-to-r from-purple-600 to-indigo-600 py-6 text-center">
-        <h1 class="text-4xl font-bold">Bran The Blessed</h1>
-        <p class="text-lg mt-2">Your Gateway to CLEM - The Future of Crypto</p>
+<body class="bg-black text-white font-sans">
+    <!-- Hero Section -->
+    <header class="relative bg-gradient-to-b from-gray-900 to-black py-16 text-center">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1621367542181-0e8e9c6e-4e9c-8f5f-5e6e8e8e8e8e')] bg-cover bg-center"></div>
+        <h1 class="relative text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-600">Bran The Blessed</h1>
+        <p class="relative text-xl md:text-2xl mt-4 font-light">Your Hub for CLEM Crypto & OSRS Trading</p>
+        <div id="clem-price" class="relative text-3xl font-bold mt-6 text-yellow-400">Loading CLEM Price...</div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <!-- CLEM Spotlight -->
-        <section class="text-center mb-12">
-            <h2 class="text-3xl font-semibold mb-4">Introducing CLEM</h2>
-            <p class="text-lg mb-6">CLEM is a revolutionary cryptocurrency designed for speed, security, and accessibility. Buy it now with your preferred payment method!</p>
-            <div id="clem-price" class="text-2xl font-bold text-green-400">Loading CLEM Price...</div>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- About CLEM -->
+        <section class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">What is CLEM?</h2>
+            <p class="text-lg max-w-2xl mx-auto">CLEM is the ultimate cryptocurrency for gamers and traders, blending speed, security, and community value. Buy it now or trade OSRS GP for CLEM!</p>
         </section>
 
         <!-- Payment Options -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <h2 class="col-span-full text-2xl font-semibold mb-4 text-center">Buy CLEM with Multiple Methods</h2>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">Credit/Debit Card</h3>
-                <p class="mt-2">Use Visa, Mastercard, or Amex via our secure Stripe integration.</p>
-                <button onclick="buyWithStripe()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <h2 class="col-span-full text-3xl font-bold mb-6 text-center">Buy CLEM</h2>
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-purple-500">
+                <h3 class="text-xl font-bold text-purple-400">PayPal</h3>
+                <p class="mt-2">Fast and secure payments with PayPal.</p>
+                <a href="https://paypal.me/yourusername/50" target="_blank" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded">Buy Now</a>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">PayPal</h3>
-                <p class="mt-2">Fast and easy payments with PayPal.</p>
-                <button onclick="buyWithPaypal()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-purple-500">
+                <h3 class="text-xl font-bold text-purple-400">Bank Transfer</h3>
+                <p class="mt-2">Direct bank payments for bulk purchases.</p>
+                <a href="/bank-instructions.html" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded">Get Instructions</a>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">Crypto (BTC, ETH, etc.)</h3>
-                <p class="mt-2">Swap your existing crypto for CLEM via Coinbase Commerce.</p>
-                <button onclick="buyWithCrypto()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">Bank Transfer</h3>
-                <p class="mt-2">Direct bank payments for larger transactions.</p>
-                <button onclick="buyWithBank()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">Apple Pay / Google Pay</h3>
-                <p class="mt-2">Quick mobile payments with your device.</p>
-                <button onclick="buyWithMobile()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">Cash App</h3>
-                <p class="mt-2">Use Cash App for seamless CLEM purchases.</p>
-                <button onclick="buyWithCashApp()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">Buy Now</button>
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-purple-500">
+                <h3 class="text-xl font-bold text-purple-400">Crypto (Coinbase)</h3>
+                <p class="mt-2">Swap BTC, ETH, or others for CLEM.</p>
+                <a href="https://commerce.coinbase.com/checkout/test_456" target="_blank" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded">Buy Now</a>
             </div>
         </section>
 
-        <!-- Price Chart -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4 text-center">CLEM Price Trend</h2>
-            <canvas id="clemChart" class="w-full h-64"></canvas>
+        <!-- OSRS Trades Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Trade OSRS GP for CLEM</h2>
+            <p class="text-lg text-center mb-8">Convert your Old School RuneScape gold into CLEM. Post your trade offer below!</p>
+            
+            <!-- Trade Form -->
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg max-w-lg mx-auto border border-yellow-500">
+                <h3 class="text-xl font-bold text-yellow-400 mb-4">Post a Trade</h3>
+                <form id="trade-form" class="space-y-4">
+                    <div>
+                        <label for="osrs-gp" class="block text-sm">OSRS GP Amount (M):</label>
+                        <input type="number" id="osrs-gp" class="w-full p-2 bg-gray-800 rounded text-white" placeholder="e.g., 100" required>
+                    </div>
+                    <div>
+                        <label for="clem-amount" class="block text-sm">CLEM Requested:</label>
+                        <input type="number" id="clem-amount" class="w-full p-2 bg-gray-800 rounded text-white" placeholder="e.g., 50" required>
+                    </div>
+                    <div>
+                        <label for="contact" class="block text-sm">Contact (Discord/Email):</label>
+                        <input type="text" id="contact" class="w-full p-2 bg-gray-800 rounded text-white" placeholder="e.g., Bran#1234" required>
+                    </div>
+                    <button type="submit" class="w-full bg-yellow-600 hover:bg-yellow-700 text-black py-2 px-4 rounded font-bold">Post Trade</button>
+                </form>
+            </div>
+
+            <!-- Trade Activity Monitor -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold text-yellow-400 mb-4 text-center">Active Trades</h3>
+                <div id="trade-list" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-gray-800 py-4 text-center">
-        <p>&copy; 2025 Bran The Blessed. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6 text-center border-t border-gray-800">
+        <p>© 2025 Bran The Blessed. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-git add .
-git commit -m "Upgraded site with CLEM focus and payment methods"
-git push origin main
