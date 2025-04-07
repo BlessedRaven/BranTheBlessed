@@ -3,86 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bran The Blessed | CLEM Crypto & OSRS Trades</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="description" content="Bran The Blessed: Funding futuristic projects like Pair AR AI Glasses, DNA-repairing Med Beds, and Hydro/Solar Generators with Blessed Raven and Pair NZ.">
+    <title>Bran The Blessed | Visionary Funding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, #1a0933, #4a2c7d);
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+        header {
+            text-align: center;
+            padding: 60px;
+            background: rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #4a2c7d; }
+            100% { text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6b44a1; }
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 3;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff00ff;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .dna {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: url('https://via.placeholder.com/100?text=DNA') no-repeat center;
+            background-size: contain;
+            animation: spin 10s infinite linear;
+            z-index: 1;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(50px) rotate(360deg); }
+        }
+        .dna:nth-child(2) { top: 20%; left: 10%; }
+        .dna:nth-child(3) { top: 50%; right: 10%; animation-direction: reverse; }
+        .equire {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('https://via.placeholder.com/50?text=🦄') no-repeat center;
+            background-size: contain;
+            animation: float 6s infinite ease-in-out;
+            z-index: 1;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+        .equire:nth-child(4) { top: 30%; left: 20%; }
+        .equire:nth-child(5) { bottom: 20%; right: 15%; }
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        h2 {
+            font-size: 2.5em;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+            margin-bottom: 20px;
+        }
+        p, li {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff00ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.3em;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #ff00ff;
+        }
+        .bitcoin {
+            font-family: monospace;
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.9);
+            position: relative;
+            z-index: 2;
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-black text-white font-sans">
-    <!-- Hero Section -->
-    <header class="relative bg-gradient-to-b from-gray-900 to-black py-16 text-center">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1621367542181-0e8e9c6e-4e9c-8f5f-5e6e8e8e8e8e')] bg-cover bg-center"></div>
-        <h1 class="relative text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-600">Bran The Blessed</h1>
-        <p class="relative text-xl md:text-2xl mt-4 font-light">Your Hub for CLEM Crypto & OSRS Trading</p>
-        <div id="clem-price" class="relative text-3xl font-bold mt-6 text-yellow-400">Loading CLEM Price...</div>
+<body>
+    <div class="dna"></div>
+    <div class="dna"></div>
+    <div class="equire"></div>
+    <div class="equire"></div>
+
+    <header>
+        <h1>Bran The Blessed</h1>
+        <p>Futuristic Innovations | Powered by Vision</p>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12">
-        <!-- About CLEM -->
-        <section class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">What is CLEM?</h2>
-            <p class="text-lg max-w-2xl mx-auto">CLEM is the ultimate cryptocurrency for gamers and traders, blending speed, security, and community value. Buy it now or trade OSRS GP for CLEM!</p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#partnerships">Partnerships</a>
+        <a href="#projects">Projects</a>
+        <a href="#funding">Fund Us</a>
+    </nav>
+
+    <div class="container">
+        <section id="partnerships" class="section">
+            <h2>Our Cosmic Partners</h2>
+            <p>We unite with trailblazers to shape the future:</p>
+            <ul>
+                <li><a href="https://blessedraven.com" target="_blank">BlessedRaven.com</a> - Masters of ethereal design.</li>
+                <li><a href="https://pair.co.nz" target="_blank">Pair.co.nz</a> - Innovators in AR and AI realms.</li>
+            </ul>
         </section>
 
-        <!-- Payment Options -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <h2 class="col-span-full text-3xl font-bold mb-6 text-center">Buy CLEM</h2>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-purple-500">
-                <h3 class="text-xl font-bold text-purple-400">PayPal</h3>
-                <p class="mt-2">Fast and secure payments with PayPal.</p>
-                <a href="https://paypal.me/yourusername/50" target="_blank" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded">Buy Now</a>
+        <section id="projects" class="section">
+            <h2>Galactic Projects</h2>
+
+            <div class="project-card">
+                <h3>Pair AR AI Glasses</h3>
+                <p>In collaboration with <a href="https://pair.co.nz" target="_blank">Pair NZ</a>, we’re funding the next evolution of augmented reality: AI-powered glasses that merge digital and physical worlds. Explore the full details on their site and join us in bringing this vision to life.</p>
             </div>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-purple-500">
-                <h3 class="text-xl font-bold text-purple-400">Bank Transfer</h3>
-                <p class="mt-2">Direct bank payments for bulk purchases.</p>
-                <a href="/bank-instructions.html" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded">Get Instructions</a>
+
+            <div class="project-card">
+                <h3>Sensory Deprivation Tank Med Bed</h3>
+                <p>A revolutionary invention to reverse mutated DNA and restore the perfect 64-codon blueprint. This Med Bed uses a Ti:Sapphire laser emitting violet light (400nm–450nm) within a sensory deprivation water-light salt bath. It repairs DNA, boosts energy, and stimulates the brain for ultimate rejuvenation.</p>
             </div>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-purple-500">
-                <h3 class="text-xl font-bold text-purple-400">Crypto (Coinbase)</h3>
-                <p class="mt-2">Swap BTC, ETH, or others for CLEM.</p>
-                <a href="https://commerce.coinbase.com/checkout/test_456" target="_blank" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded">Buy Now</a>
+
+            <div class="project-card">
+                <h3>Small Hydro/Solar Generator</h3>
+                <p>A compact, hybrid power solution combining hydroelectric and solar energy. Designed to plug directly into Starlink satellites and computers, this generator ensures sustainable, off-grid connectivity and power for the modern explorer.</p>
             </div>
         </section>
 
-        <!-- OSRS Trades Section -->
-        <section class="mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Trade OSRS GP for CLEM</h2>
-            <p class="text-lg text-center mb-8">Convert your Old School RuneScape gold into CLEM. Post your trade offer below!</p>
-            
-            <!-- Trade Form -->
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg max-w-lg mx-auto border border-yellow-500">
-                <h3 class="text-xl font-bold text-yellow-400 mb-4">Post a Trade</h3>
-                <form id="trade-form" class="space-y-4">
-                    <div>
-                        <label for="osrs-gp" class="block text-sm">OSRS GP Amount (M):</label>
-                        <input type="number" id="osrs-gp" class="w-full p-2 bg-gray-800 rounded text-white" placeholder="e.g., 100" required>
-                    </div>
-                    <div>
-                        <label for="clem-amount" class="block text-sm">CLEM Requested:</label>
-                        <input type="number" id="clem-amount" class="w-full p-2 bg-gray-800 rounded text-white" placeholder="e.g., 50" required>
-                    </div>
-                    <div>
-                        <label for="contact" class="block text-sm">Contact (Discord/Email):</label>
-                        <input type="text" id="contact" class="w-full p-2 bg-gray-800 rounded text-white" placeholder="e.g., Bran#1234" required>
-                    </div>
-                    <button type="submit" class="w-full bg-yellow-600 hover:bg-yellow-700 text-black py-2 px-4 rounded font-bold">Post Trade</button>
-                </form>
-            </div>
-
-            <!-- Trade Activity Monitor -->
-            <div class="mt-12">
-                <h3 class="text-2xl font-bold text-yellow-400 mb-4 text-center">Active Trades</h3>
-                <div id="trade-list" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            </div>
+        <section id="funding" class="section">
+            <h2>Fuel the Future</h2>
+            <p>Support our mission to transcend limits. Fund via Bitcoin:</p>
+            <div class="bitcoin">bc1quy9y67t8trql9zquv7qcrtznxu5g4r9xlmqzyu</div>
+            <p>For inquiries, contact: <a href="mailto:Jacobryandawn@gmail.com">Jacobryandawn@gmail.com</a></p>
+            <a href="#funding" class="btn">Join the Revolution</a>
         </section>
-    </main>
+    </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-6 text-center border-t border-gray-800">
-        <p>© 2025 Bran The Blessed. All rights reserved.</p>
+    <footer>
+        <p>© 2025 Bran The Blessed | Powered by <a href="https://blessedraven.com" target="_blank">BlessedRaven.com</a> & <a href="https://pair.co.nz" target="_blank">Pair.co.nz</a></p>
+        <p>Hosted on <a href="https://github.com" target="_blank">GitHub</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dynamically add more DNA and equires for animation
+        for (let i = 0; i < 5; i++) {
+            let dna = document.createElement('div');
+            dna.className = 'dna';
+            dna.style.top = `${Math.random() * 80}%`;
+            dna.style.left = `${Math.random() * 80}%`;
+            document.body.appendChild(dna);
+
+            let equire = document.createElement('div');
+            equire.className = 'equire';
+            equire.style.top = `${Math.random() * 80}%`;
+            equire.style.left = `${Math.random() * 80}%`;
+            document.body.appendChild(equire);
+        }
+    </script>
 </body>
 </html>
