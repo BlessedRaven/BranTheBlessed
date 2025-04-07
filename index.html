@@ -17,6 +17,13 @@
             color: #fff;
             overflow-x: hidden;
             position: relative;
+            min-height: 100vh;
+        }
+        /* Fallback font in case Google Fonts fails */
+        @media (font-family: 'Orbitron') {
+            body {
+                font-family: sans-serif;
+            }
         }
         header {
             text-align: center;
@@ -223,8 +230,9 @@
     </footer>
 
     <script>
-        // Dynamically add more sacred geometry and DNA strands
-        for (let i = 0; i < 6; i++) {
+        // Optimize dynamic element creation for performance
+        const maxElements = 4; // Reduced for better performance
+        for (let i = 0; i < maxElements; i++) {
             let sacred = document.createElement('div');
             sacred.className = 'sacred-geometry';
             sacred.innerHTML = `<svg viewBox="0 0 100 100"><path d="M50 10 L90 90 L10 90 Z" /><circle cx="50" cy="50" r="40" /></svg>`;
