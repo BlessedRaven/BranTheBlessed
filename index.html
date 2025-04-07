@@ -60,36 +60,41 @@
             position: relative;
             z-index: 2;
         }
-        .dna {
+        .sacred-geometry {
             position: absolute;
-            width: 100px;
-            height: 100px;
-            background: url('https://via.placeholder.com/100?text=DNA') no-repeat center;
-            background-size: contain;
-            animation: spin 10s infinite linear;
+            width: 120px;
+            height: 120px;
+            opacity: 0.6;
+            animation: spin-sacred 15s infinite linear;
             z-index: 1;
+            pointer-events: none;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
-            100% { transform: rotate(360deg) translateX(50px) rotate(360deg); }
+        .sacred-geometry svg {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: #ff00ff;
+            stroke-width: 1;
+            filter: drop-shadow(0 0 10px #ff00ff);
         }
-        .dna:nth-child(2) { top: 20%; left: 10%; }
-        .dna:nth-child(3) { top: 50%; right: 10%; animation-direction: reverse; }
-        .equire {
+        @keyframes spin-sacred {
+            0% { transform: rotate(0deg) translate(60px) rotate(0deg); }
+            100% { transform: rotate(360deg) translate(60px) rotate(360deg); }
+        }
+        .dna-strand {
             position: absolute;
-            width: 50px;
-            height: 50px;
-            background: url('https://via.placeholder.com/50?text=🦄') no-repeat center;
-            background-size: contain;
-            animation: float 6s infinite ease-in-out;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #fff 10%, transparent 20%);
+            border-radius: 50%;
+            animation: pulse 8s infinite ease-in-out;
             z-index: 1;
+            pointer-events: none;
         }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-30px); }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) translateY(0); opacity: 0.5; }
+            50% { transform: scale(1.2) translateY(-20px); opacity: 0.8; }
         }
-        .equire:nth-child(4) { top: 30%; left: 20%; }
-        .equire:nth-child(5) { bottom: 20%; right: 15%; }
         .section {
             background: rgba(255, 255, 255, 0.1);
             padding: 30px;
@@ -103,6 +108,11 @@
             color: #ff00ff;
             text-shadow: 0 0 10px #ff00ff;
             margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.8em;
+            color: #fff;
+            margin-bottom: 15px;
         }
         p, li {
             font-size: 1.2em;
@@ -141,10 +151,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="dna"></div>
-    <div class="dna"></div>
-    <div class="equire"></div>
-    <div class="equire"></div>
+    <!-- Sacred Geometry and DNA Elements -->
+    <div class="sacred-geometry" style="top: 10%; left: 15%;">
+        <svg viewBox="0 0 100 100">
+            <path d="M50 10 L90 90 L10 90 Z" />
+            <circle cx="50" cy="50" r="40" />
+        </svg>
+    </div>
+    <div class="sacred-geometry" style="top: 60%; right: 20%; animation-direction: reverse;">
+        <svg viewBox="0 0 100 100">
+            <path d="M50 10 L90 90 L10 90 Z" />
+            <circle cx="50" cy="50" r="40" />
+        </svg>
+    </div>
+    <div class="dna-strand" style="top: 30%; left: 10%;"></div>
+    <div class="dna-strand" style="bottom: 20%; right: 15%;"></div>
 
     <header>
         <h1>Bran The Blessed</h1>
@@ -173,17 +194,17 @@
 
             <div class="project-card">
                 <h3>Pair AR AI Glasses</h3>
-                <p>In collaboration with <a href="https://pair.co.nz" target="_blank">Pair NZ</a>, we’re funding the next evolution of augmented reality: AI-powered glasses that merge digital and physical worlds. Explore the full details on their site and join us in bringing this vision to life.</p>
+                <p>In collaboration with <a href="https://pair.co.nz" target="_blank">Pair NZ</a>, we’re funding the next leap in human perception: the Pair AR AI Glasses. These sleek, lightweight glasses feature advanced augmented reality overlays powered by a neural AI core. With a 120-degree field of view, 4K micro-OLED displays, and real-time environmental mapping via LiDAR sensors, they seamlessly blend digital interfaces with the physical world. Voice-activated AI assistants, gesture controls, and biofeedback integration (heart rate, eye tracking) make these glasses a portal to enhanced cognition and creativity. Perfect for designers, explorers, and futurists—learn more at Pair NZ and help us manifest this reality.</p>
             </div>
 
             <div class="project-card">
                 <h3>Sensory Deprivation Tank Med Bed</h3>
-                <p>A revolutionary invention to reverse mutated DNA and restore the perfect 64-codon blueprint. This Med Bed uses a Ti:Sapphire laser emitting violet light (400nm–450nm) within a sensory deprivation water-light salt bath. It repairs DNA, boosts energy, and stimulates the brain for ultimate rejuvenation.</p>
+                <p>A groundbreaking fusion of ancient wisdom and cutting-edge science, our Sensory Deprivation Tank Med Bed restores the body’s primal blueprint. Encased in a soundproof, light-isolated chamber filled with a buoyant magnesium-sulfate solution, the bed uses a Ti:Sapphire laser emitting violet light (400nm–450nm) to penetrate cellular structures. This wavelength targets mitochondrial DNA, repairing mutations and reactivating dormant codons to achieve the optimal 64-codon sequence. Paired with binaural beats and subtle electromagnetic pulses, it recalibrates the nervous system, boosts ATP production, and enhances neuroplasticity—offering rejuvenation at a cellular and spiritual level.</p>
             </div>
 
             <div class="project-card">
                 <h3>Small Hydro/Solar Generator</h3>
-                <p>A compact, hybrid power solution combining hydroelectric and solar energy. Designed to plug directly into Starlink satellites and computers, this generator ensures sustainable, off-grid connectivity and power for the modern explorer.</p>
+                <p>A compact marvel of sustainable engineering, our Small Hydro/Solar Generator powers the future off-grid. Measuring just 12x8x6 inches, it harnesses micro-hydro turbines (up to 50W from flowing water) and flexible solar panels (100W peak output) to deliver a hybrid 150W capacity. Designed to plug directly into Starlink terminals and laptops via USB-C and DC outputs, it features a smart charge controller for seamless energy switching and a lithium-iron-phosphate battery for 500Wh storage. Ideal for remote explorers, it ensures constant connectivity and power in harmony with nature’s rhythms.</p>
             </div>
         </section>
 
@@ -202,19 +223,20 @@
     </footer>
 
     <script>
-        // Dynamically add more DNA and equires for animation
-        for (let i = 0; i < 5; i++) {
+        // Dynamically add more sacred geometry and DNA strands
+        for (let i = 0; i < 6; i++) {
+            let sacred = document.createElement('div');
+            sacred.className = 'sacred-geometry';
+            sacred.innerHTML = `<svg viewBox="0 0 100 100"><path d="M50 10 L90 90 L10 90 Z" /><circle cx="50" cy="50" r="40" /></svg>`;
+            sacred.style.top = `${Math.random() * 80}%`;
+            sacred.style.left = `${Math.random() * 80}%`;
+            document.body.appendChild(sacred);
+
             let dna = document.createElement('div');
-            dna.className = 'dna';
+            dna.className = 'dna-strand';
             dna.style.top = `${Math.random() * 80}%`;
             dna.style.left = `${Math.random() * 80}%`;
             document.body.appendChild(dna);
-
-            let equire = document.createElement('div');
-            equire.className = 'equire';
-            equire.style.top = `${Math.random() * 80}%`;
-            equire.style.left = `${Math.random() * 80}%`;
-            document.body.appendChild(equire);
         }
     </script>
 </body>
