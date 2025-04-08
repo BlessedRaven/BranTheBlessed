@@ -6,7 +6,24 @@
     <title>Bran the Blessed - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <style>
-        /* Same styles as blessedraven.com */
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(180deg, #0a0015, #1a0000, #2b0010); color: #ffffff; overflow-x: hidden; min-height: 100vh; position: relative; }
+        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.9); padding: 20px 0; z-index: 1000; border-bottom: 2px solid #ff3333; box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 40px; }
+        nav ul li a { color: #ffffff; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 1.2em; text-transform: uppercase; letter-spacing: 2px; transition: color 0.3s, transform 0.3s; }
+        nav ul li a:hover { color: #ffd700; transform: translateY(-3px); }
+        header { padding: 150px 20px 80px; text-align: center; background: url('https://i.imgur.com/blessed-raven-logo.jpg') no-repeat center; background-size: cover; border-bottom: 2px solid #ff3333; box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); }
+        h1 { font-family: 'Cinzel Decorative', cursive; font-size: 5em; color: #ff3333; text-shadow: 0 0 20px #ff3333, 0 0 40px #ff3333; animation: fadeIn 2s ease-in-out; }
+        @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+        .content-section { max-width: 1000px; margin: 60px auto; padding: 40px; background: rgba(255, 51, 51, 0.05); border: 2px solid #ff3333; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 51, 51, 0.3); animation: fadeIn 1.5s ease-in-out; }
+        h2 { font-family: 'Cinzel Decorative', cursive; font-size: 2.5em; color: #ffd700; margin-bottom: 20px; text-shadow: 0 0 10px #ffd700; }
+        p, ul { font-size: 1.2em; line-height: 1.8; color: #ffffff; }
+        ul { list-style: none; padding: 0; margin: 20px 0; }
+        li { margin: 10px 0; }
+        a { color: #ffd700; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { background: rgba(0, 0, 0, 0.9); padding: 20px; text-align: center; position: fixed; bottom: 0; width: 100%; border-top: 2px solid #ff3333; box-shadow: 0 -5px 20px rgba(255, 51, 51, 0.5); color: #ffffff; font-size: 1em; }
     </style>
 </head>
 <body>
@@ -35,16 +52,51 @@
     <main>
         <div id="lore" class="content-section">
             <h2>Lore</h2>
-            <p>Bran the Blessed’s vision emerges from a fusion of ancient wisdom and cutting-edge discovery, inspired by a dream-encoded directive: "Ricochet 4356." This project channels the pantheistic unity of all existence, where the divine flows through nature, consciousness, and technology. Above New Zealand’s Clutha River—a lifeline of the Kāi Tahu—stands the Torus Pyramid, a nexus of Egyptian, Greek, and Druid traditions venerating deities like Pan, Athena, and Thoth. Here, Med Beds heal with nature’s light, the Astral Game unveils the cosmic soul, and the Torus Energy System powers a boundless future. Bran the Blessed ignites a renaissance of spirit and science, weaving humanity into the eternal tapestry of the universe.</p>
+            <p>Bran the Blessed embodies a visionary fusion of ancient wisdom and futuristic innovation, rooted in the belief that divinity flows through all existence. This project explores the unity of consciousness, energy, and the cosmos, harnessing advanced technologies like sensory deprivation tanks, virtual reality, and toroidal energy systems to elevate humanity. It stands as a beacon for a new era, where science and mysticism converge to unlock the boundless potential within us all.</p>
         </div>
-        <!-- Mission and Explore sections remain unchanged or can be updated as needed -->
+        <div id="mission" class="content-section">
+            <h2>Mission</h2>
+            <p>Our mission is to transcend the boundaries of the physical and spiritual, blending cutting-edge science with timeless understanding. Through initiatives like healing Med Beds, the immersive Astral VR experience, and sustainable Torus Energy systems, we aim to enhance human consciousness, restore vitality, and create a harmonious future. Bran the Blessed seeks to inspire a global awakening, uniting humanity in a shared journey toward enlightenment and infinite possibility.</p>
+        </div>
+        <div id="explore" class="content-section">
+            <h2>Explore</h2>
+            <p>Dive into the interconnected initiatives of Bran the Blessed:</p>
+            <ul>
+                <li><strong><a href="family-tree.html">Sacred Family Tree:</a></strong> Trace a lineage weaving through history and myth.</li>
+                <li><strong><a href="immortality.html">Immortality:</a></strong> Support research into DNA repair and genetic preservation.</li>
+                <li><strong><a href="pyramids.html">Torus Pyramid:</a></strong> Discover a sacred structure channeling universal energy.</li>
+                <li><strong><a href="astral-game.html">Astral Game:</a></strong> Journey through a virtual astral plane.</li>
+                <li><strong><a href="med-beds.html">Med Beds:</a></strong> Explore healing technology using light and sound.</li>
+                <li><strong><a href="theory-of-everything.html">Theory of Everything:</a></strong> Unify science and spirituality through a toroidal cosmos.</li>
+                <li><strong><a href="torus-energy.html">Torus Energy:</a></strong> Harness the universal pattern for infinite energy.</li>
+                <li><strong><a href="pantheism.html">Pantheism:</a></strong> Embrace the divine unity of all existence.</li>
+                <li><strong><a href="projects.html">Projects:</a></strong> Learn about our pioneering innovations.</li>
+                <li><strong><a href="donate.html">Donate:</a></strong> Join us in shaping humanity’s future.</li>
+            </ul>
+        </div>
     </main>
     <footer>
         <p>© 2025 Bran the Blessed. All rights reserved.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        /* Same particle.js config */
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": ["#ff3333", "#ffd700"] },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": true },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#ff3333", "opacity": 0.3, "width": 1 },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } }
+            },
+            "retina_detect": true
+        });
     </script>
 </body>
 </html>
