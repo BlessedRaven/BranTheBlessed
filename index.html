@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bran The Blessed: Funding futuristic projects like Pair AR AI Glasses, DNA-repairing Med Beds, and Hydro/Solar Generators with Blessed Raven and Pair NZ.">
-    <title>Bran The Blessed | Visionary Funding</title>
+    <meta name="description" content="Bran The Blessed: A futuristic bartering platform to trade goods, services, and ideas seamlessly.">
+    <title>Bran The Blessed | Barter Revolution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,240 +13,234 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Orbitron', sans-serif;
-            background: linear-gradient(135deg, #1a0933, #4a2c7d);
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1a0933, #2e1a5c);
             color: #fff;
-            overflow-x: hidden;
-            position: relative;
             min-height: 100vh;
-        }
-        /* Fallback font in case Google Fonts fails */
-        @media (font-family: 'Orbitron') {
-            body {
-                font-family: sans-serif;
-            }
+            overflow-x: hidden;
         }
         header {
             text-align: center;
-            padding: 60px;
-            background: rgba(0, 0, 0, 0.7);
-            position: relative;
-            z-index: 2;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.85);
+            border-bottom: 2px solid #ff00ff;
         }
         header h1 {
-            font-size: 3em;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8em;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            letter-spacing: 5px;
-            animation: glow 2s infinite alternate;
+            animation: glow 1.5s infinite alternate;
         }
         @keyframes glow {
-            0% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #4a2c7d; }
-            100% { text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6b44a1; }
+            0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff; }
+            100% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff; }
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #ccc;
         }
         nav {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px;
             text-align: center;
             position: sticky;
             top: 0;
-            z-index: 3;
+            z-index: 10;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.2em;
+            margin: 0 15px;
+            font-size: 1.1em;
             transition: color 0.3s;
         }
         nav a:hover {
             color: #ff00ff;
         }
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px;
-            position: relative;
-            z-index: 2;
-        }
-        .sacred-geometry {
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            opacity: 0.6;
-            animation: spin-sacred 15s infinite linear;
-            z-index: 1;
-            pointer-events: none;
-        }
-        .sacred-geometry svg {
-            width: 100%;
-            height: 100%;
-            fill: none;
-            stroke: #ff00ff;
-            stroke-width: 1;
-            filter: drop-shadow(0 0 10px #ff00ff);
-        }
-        @keyframes spin-sacred {
-            0% { transform: rotate(0deg) translate(60px) rotate(0deg); }
-            100% { transform: rotate(360deg) translate(60px) rotate(360deg); }
-        }
-        .dna-strand {
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            background: radial-gradient(circle, #fff 10%, transparent 20%);
-            border-radius: 50%;
-            animation: pulse 8s infinite ease-in-out;
-            z-index: 1;
-            pointer-events: none;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1) translateY(0); opacity: 0.5; }
-            50% { transform: scale(1.2) translateY(-20px); opacity: 0.8; }
-        }
-        .section {
-            background: rgba(255, 255, 255, 0.1);
             padding: 30px;
+        }
+        .post-form, .listings {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 10px;
             margin: 20px 0;
-            border-radius: 15px;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
         }
         h2 {
-            font-size: 2.5em;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2em;
             color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
             margin-bottom: 20px;
         }
-        h3 {
-            font-size: 1.8em;
+        .post-form input, .post-form textarea, .post-form select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ff00ff;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
             color: #fff;
-            margin-bottom: 15px;
+            font-size: 1em;
         }
-        p, li {
-            font-size: 1.2em;
-            line-height: 1.6;
+        .post-form textarea {
+            height: 100px;
+            resize: vertical;
         }
         .btn {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 12px 25px;
             background: #ff00ff;
             color: #fff;
-            text-decoration: none;
-            border-radius: 25px;
-            font-size: 1.3em;
-            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         .btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px #ff00ff;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #ff00ff;
         }
-        .bitcoin {
-            font-family: monospace;
-            background: #333;
-            padding: 10px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
+        .listing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .listing-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .listing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+        }
+        .listing-card h3 {
+            font-size: 1.5em;
+            color: #fff;
+        }
+        .listing-card p {
+            font-size: 1em;
+            color: #ddd;
+            margin: 10px 0;
+        }
+        .listing-card .category {
+            font-style: italic;
+            color: #ff00ff;
         }
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             background: rgba(0, 0, 0, 0.9);
-            position: relative;
-            z-index: 2;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #ff00ff;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            nav a { margin: 0 10px; font-size: 1em; }
+            .container { padding: 15px; }
+            .listing-grid { grid-template-columns: 1fr; }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Sacred Geometry and DNA Elements -->
-    <div class="sacred-geometry" style="top: 10%; left: 15%;">
-        <svg viewBox="0 0 100 100">
-            <path d="M50 10 L90 90 L10 90 Z" />
-            <circle cx="50" cy="50" r="40" />
-        </svg>
-    </div>
-    <div class="sacred-geometry" style="top: 60%; right: 20%; animation-direction: reverse;">
-        <svg viewBox="0 0 100 100">
-            <path d="M50 10 L90 90 L10 90 Z" />
-            <circle cx="50" cy="50" r="40" />
-        </svg>
-    </div>
-    <div class="dna-strand" style="top: 30%; left: 10%;"></div>
-    <div class="dna-strand" style="bottom: 20%; right: 15%;"></div>
-
     <header>
         <h1>Bran The Blessed</h1>
-        <p>Futuristic Innovations | Powered by Vision</p>
+        <p>Trade the Future | Barter with Purpose</p>
     </header>
 
     <nav>
         <a href="#home">Home</a>
-        <a href="#partnerships">Partnerships</a>
-        <a href="#projects">Projects</a>
-        <a href="#funding">Fund Us</a>
+        <a href="#post">Post an Offer</a>
+        <a href="#listings">Browse Listings</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <div class="container">
-        <section id="partnerships" class="section">
-            <h2>Our Cosmic Partners</h2>
-            <p>We unite with trailblazers to shape the future:</p>
-            <ul>
-                <li><a href="https://blessedraven.com" target="_blank">BlessedRaven.com</a> - Masters of ethereal design.</li>
-                <li><a href="https://pair.co.nz" target="_blank">Pair.co.nz</a> - Innovators in AR and AI realms.</li>
-            </ul>
+        <section id="post" class="post-form">
+            <h2>Post Your Offer</h2>
+            <form id="barterForm" onsubmit="addListing(event)">
+                <input type="text" id="title" placeholder="What are you offering?" required>
+                <textarea id="description" placeholder="Describe your offer (e.g., condition, details)" required></textarea>
+                <select id="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="Goods">Goods</option>
+                    <option value="Services">Services</option>
+                    <option value="Skills">Skills</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="wanted" placeholder="What do you want in return?" required>
+                <button type="submit" class="btn">Post Offer</button>
+            </form>
         </section>
 
-        <section id="projects" class="section">
-            <h2>Galactic Projects</h2>
-
-            <div class="project-card">
-                <h3>Pair AR AI Glasses</h3>
-                <p>In collaboration with <a href="https://pair.co.nz" target="_blank">Pair NZ</a>, we’re funding the next leap in human perception: the Pair AR AI Glasses. These sleek, lightweight glasses feature advanced augmented reality overlays powered by a neural AI core. With a 120-degree field of view, 4K micro-OLED displays, and real-time environmental mapping via LiDAR sensors, they seamlessly blend digital interfaces with the physical world. Voice-activated AI assistants, gesture controls, and biofeedback integration (heart rate, eye tracking) make these glasses a portal to enhanced cognition and creativity. Perfect for designers, explorers, and futurists—learn more at Pair NZ and help us manifest this reality.</p>
+        <section id="listings" class="listings">
+            <h2>Available Listings</h2>
+            <div class="listing-grid" id="listingGrid">
+                <!-- Listings will be dynamically added here -->
             </div>
-
-            <div class="project-card">
-                <h3>Sensory Deprivation Tank Med Bed</h3>
-                <p>A groundbreaking fusion of ancient wisdom and cutting-edge science, our Sensory Deprivation Tank Med Bed restores the body’s primal blueprint. Encased in a soundproof, light-isolated chamber filled with a buoyant magnesium-sulfate solution, the bed uses a Ti:Sapphire laser emitting violet light (400nm–450nm) to penetrate cellular structures. This wavelength targets mitochondrial DNA, repairing mutations and reactivating dormant codons to achieve the optimal 64-codon sequence. Paired with binaural beats and subtle electromagnetic pulses, it recalibrates the nervous system, boosts ATP production, and enhances neuroplasticity—offering rejuvenation at a cellular and spiritual level.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Small Hydro/Solar Generator</h3>
-                <p>A compact marvel of sustainable engineering, our Small Hydro/Solar Generator powers the future off-grid. Measuring just 12x8x6 inches, it harnesses micro-hydro turbines (up to 50W from flowing water) and flexible solar panels (100W peak output) to deliver a hybrid 150W capacity. Designed to plug directly into Starlink terminals and laptops via USB-C and DC outputs, it features a smart charge controller for seamless energy switching and a lithium-iron-phosphate battery for 500Wh storage. Ideal for remote explorers, it ensures constant connectivity and power in harmony with nature’s rhythms.</p>
-            </div>
-        </section>
-
-        <section id="funding" class="section">
-            <h2>Fuel the Future</h2>
-            <p>Support our mission to transcend limits. Fund via Bitcoin:</p>
-            <div class="bitcoin">bc1quy9y67t8trql9zquv7qcrtznxu5g4r9xlmqzyu</div>
-            <p>For inquiries, contact: <a href="mailto:Jacobryandawn@gmail.com">Jacobryandawn@gmail.com</a></p>
-            <a href="#funding" class="btn">Join the Revolution</a>
         </section>
     </div>
 
     <footer>
-        <p>© 2025 Bran The Blessed | Powered by <a href="https://blessedraven.com" target="_blank">BlessedRaven.com</a> & <a href="https://pair.co.nz" target="_blank">Pair.co.nz</a></p>
-        <p>Hosted on <a href="https://github.com" target="_blank">GitHub</a></p>
+        <p>© 2025 Bran The Blessed | A Bartering Revolution</p>
+        <p>Contact: <a href="mailto:Jacobryandawn@gmail.com">Jacobryandawn@gmail.com</a></p>
     </footer>
 
     <script>
-        // Optimize dynamic element creation for performance
-        const maxElements = 4; // Reduced for better performance
-        for (let i = 0; i < maxElements; i++) {
-            let sacred = document.createElement('div');
-            sacred.className = 'sacred-geometry';
-            sacred.innerHTML = `<svg viewBox="0 0 100 100"><path d="M50 10 L90 90 L10 90 Z" /><circle cx="50" cy="50" r="40" /></svg>`;
-            sacred.style.top = `${Math.random() * 80}%`;
-            sacred.style.left = `${Math.random() * 80}%`;
-            document.body.appendChild(sacred);
+        // Simple client-side listing management
+        function addListing(event) {
+            event.preventDefault();
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const category = document.getElementById('category').value;
+            const wanted = document.getElementById('wanted').value;
 
-            let dna = document.createElement('div');
-            dna.className = 'dna-strand';
-            dna.style.top = `${Math.random() * 80}%`;
-            dna.style.left = `${Math.random() * 80}%`;
-            document.body.appendChild(dna);
+            const listingGrid = document.getElementById('listingGrid');
+            const listingCard = document.createElement('div');
+            listingCard.className = 'listing-card';
+            listingCard.innerHTML = `
+                <h3>${title}</h3>
+                <p>${description}</p>
+                <p class="category">Category: ${category}</p>
+                <p><strong>Wanted:</strong> ${wanted}</p>
+                <button class="btn" onclick="alert('Contact the poster via email!');">Trade Now</button>
+            `;
+            listingGrid.appendChild(listingCard);
+
+            // Reset form
+            document.getElementById('barterForm').reset();
         }
+
+        // Sample listings to start with
+        const sampleListings = [
+            { title: "Handmade Jewelry", desc: "Beautifully crafted necklaces and bracelets.", cat: "Goods", want: "Gardening Tools" },
+            { title: "Web Design Service", desc: "Custom website design, 5 pages.", cat: "Services", want: "Home-cooked Meals" },
+            { title: "Guitar Lessons", desc: "Beginner to intermediate, 1-hour sessions.", cat: "Skills", want: "Bicycle Repair" }
+        ];
+
+        sampleListings.forEach(item => {
+            const listingGrid = document.getElementById('listingGrid');
+            const listingCard = document.createElement('div');
+            listingCard.className = 'listing-card';
+            listingCard.innerHTML = `
+                <h3>${item.title}</h3>
+                <p>${item.desc}</p>
+                <p class="category">Category: ${item.cat}</p>
+                <p><strong>Wanted:</strong> ${item.want}</p>
+                <button class="btn" onclick="alert('Contact the poster via email!');">Trade Now</button>
+            `;
+            listingGrid.appendChild(listingCard);
+        });
     </script>
 </body>
 </html>
