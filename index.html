@@ -16,14 +16,16 @@
         header { padding: 150px 20px 80px; text-align: center; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(10, 0, 21, 0.9)); border-bottom: 2px solid #ff3333; box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); }
         h1 { font-family: 'Cinzel Decorative', cursive; font-size: 5em; color: #ff3333; text-shadow: 0 0 20px #ff3333, 0 0 40px #ff3333; animation: fadeIn 2s ease-in-out; }
         @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-        .content-section { max-width: 1000px; margin: 60px auto; padding: 40px; background: rgba(255, 51, 51, 0.05); border: 2px solid #ff3333; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 51, 51, 0.3); animation: fadeIn 1.5s ease-in-out; }
+        .content-section { max-width: 1000px; margin: 60px auto; padding: 40px; border: 2px solid #ff3333; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 51, 51, 0.3); animation: fadeIn 1.5s ease-in-out; }
+        .content-section:nth-child(odd) { background: rgba(255, 51, 51, 0.05); }
+        .content-section:nth-child(even) { background: rgba(51, 255, 153, 0.05); }
         h2 { font-family: 'Cinzel Decorative', cursive; font-size: 2.5em; color: #ffd700; margin-bottom: 20px; text-shadow: 0 0 10px #ffd700; }
         p, ul { font-size: 1.2em; line-height: 1.8; color: #ffffff; }
         ul { list-style: none; padding: 0; margin: 20px 0; }
         li { margin: 10px 0; }
         a { color: #ffd700; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        footer { background: rgba(0, 0, 0, 0.9); padding: 20px; text-align: center; position: fixed; bottom: 0; width: 100%; border-top: 2px solid #ff3333; box-shadow: 0 -5px 20px rgba(255, 51, 51, 0.5); color: #ffffff; font-size: 1em; }
+        footer { background: rgba(0, 0, 0, 0.9); padding: 20px; text-align: center; width: 100%; border-top: 2px solid #ff3333; box-shadow: 0 -5px 20px rgba(255, 51, 51, 0.5); color: #ffffff; font-size: 1em; }
     </style>
 </head>
 <body>
@@ -31,14 +33,11 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#lore">Lore</a></li>
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#explore">Explore</a></li>
             <li><a href="family-tree.html">Family Tree</a></li>
             <li><a href="astral-game.html">Astral Game</a></li>
             <li><a href="med-beds.html">Med Beds</a></li>
             <li><a href="theory-of-everything.html">Theory of Everything</a></li>
-            <li><a href="pantheism.html">Pantheism</a></li>
+            <li><a href="panchristism.html">Panchristism</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="donate.html">Donate</a></li>
         </ul>
@@ -47,26 +46,13 @@
         <h1>Bran the Blessed</h1>
     </header>
     <main>
-        <div id="lore" class="content-section">
-            <h2>Lore</h2>
+        <div class="content-section">
+            <h2>Welcome to Bran the Blessed</h2>
             <p>Bran the Blessed embodies a visionary fusion of ancient wisdom and futuristic innovation, rooted in the belief that divinity flows through all existence. This project explores the unity of consciousness, energy, and the cosmos, harnessing advanced technologies like sensory deprivation tanks and virtual reality to elevate humanity. It stands as a beacon for a new era, where science and mysticism converge to unlock the boundless potential within us all.</p>
         </div>
-        <div id="mission" class="content-section">
-            <h2>Mission</h2>
-            <p>Our mission is to transcend the boundaries of the physical and spiritual, blending cutting-edge science with timeless understanding. Through initiatives like healing Med Beds and the immersive Astral VR experience, we aim to enhance human consciousness, restore vitality, and create a harmonious future. Bran the Blessed seeks to inspire a global awakening, uniting humanity in a shared journey toward enlightenment and infinite possibility.</p>
-        </div>
-        <div id="explore" class="content-section">
-            <h2>Explore</h2>
-            <p>Dive into the interconnected initiatives of Bran the Blessed:</p>
-            <ul>
-                <li><strong><a href="family-tree.html">Sacred Family Tree:</a></strong> Trace a lineage weaving through history and myth.</li>
-                <li><strong><a href="astral-game.html">Astral Game:</a></strong> Journey through a virtual astral plane.</li>
-                <li><strong><a href="med-beds.html">Med Beds:</a></strong> Explore healing technology using light and sound.</li>
-                <li><strong><a href="theory-of-everything.html">Theory of Everything:</a></strong> Unify science and spirituality through a toroidal cosmos.</li>
-                <li><strong><a href="pantheism.html">Pantheism:</a></strong> Embrace the divine unity of all existence.</li>
-                <li><strong><a href="projects.html">Projects:</a></strong> Learn about our pioneering innovations.</li>
-                <li><strong><a href="donate.html">Donate:</a></strong> Join us in shaping humanity’s future.</li>
-            </ul>
+        <div class="content-section">
+            <h2>Our Vision</h2>
+            <p>We aim to transcend the boundaries of the physical and spiritual, blending cutting-edge science with timeless understanding. Through initiatives like healing Med Beds, the immersive Astral VR experience, and innovative augmented reality tools, we seek to enhance human consciousness, restore vitality, and create a harmonious future. Bran the Blessed inspires a global awakening, uniting humanity in a shared journey toward enlightenment and infinite possibility.</p>
         </div>
     </main>
     <footer>
