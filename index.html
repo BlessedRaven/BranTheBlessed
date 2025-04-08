@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bran The Blessed: A futuristic bartering platform to trade goods, services, and ideas seamlessly.">
-    <title>Bran The Blessed | Barter Revolution</title>
+    <meta name="description" content="Bran The Blessed: Barter rare earth elements and resources globally.">
+    <title>Bran The Blessed | Barter Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -77,7 +77,7 @@
             color: #ff00ff;
             margin-bottom: 20px;
         }
-        .post-form input, .post-form textarea, .post-form select {
+        .post-form input, .post-form textarea {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
@@ -88,7 +88,7 @@
             font-size: 1em;
         }
         .post-form textarea {
-            height: 100px;
+            height: 80px;
             resize: vertical;
         }
         .btn {
@@ -128,9 +128,9 @@
         .listing-card p {
             font-size: 1em;
             color: #ddd;
-            margin: 10px 0;
+            margin: 5px 0;
         }
-        .listing-card .category {
+        .listing-card .contact {
             font-style: italic;
             color: #ff00ff;
         }
@@ -155,7 +155,7 @@
 <body>
     <header>
         <h1>Bran The Blessed</h1>
-        <p>Trade the Future | Barter with Purpose</p>
+        <p>Global Barter Hub | Trade Elements & Resources</p>
     </header>
 
     <nav>
@@ -167,24 +167,19 @@
 
     <div class="container">
         <section id="post" class="post-form">
-            <h2>Post Your Offer</h2>
+            <h2>Post Your Barter Offer</h2>
             <form id="barterForm" onsubmit="addListing(event)">
-                <input type="text" id="title" placeholder="What are you offering?" required>
-                <textarea id="description" placeholder="Describe your offer (e.g., condition, details)" required></textarea>
-                <select id="category" required>
-                    <option value="" disabled selected>Select a category</option>
-                    <option value="Goods">Goods</option>
-                    <option value="Services">Services</option>
-                    <option value="Skills">Skills</option>
-                    <option value="Other">Other</option>
-                </select>
-                <input type="text" id="wanted" placeholder="What do you want in return?" required>
+                <input type="text" id="offering" placeholder="What are you offering? (e.g., Samarium, Iron, Wood)" required>
+                <textarea id="offerDetails.Concurrent" placeholder="Details of your offer (quantity, condition, etc.)" required></textarea>
+                <input type="text" id="wanted" placeholder="What do you want? (e.g., Gadolinium, Gold, Coal)" required>
+                <textarea id="wantedDetails" placeholder="Details of what you want (quantity, specifics, etc.)" required></textarea>
+                <input type="text" id="contact" placeholder="Your contact details (email, phone, etc.)" required>
                 <button type="submit" class="btn">Post Offer</button>
             </form>
         </section>
 
         <section id="listings" class="listings">
-            <h2>Available Listings</h2>
+            <h2>Live Listings</h2>
             <div class="listing-grid" id="listingGrid">
                 <!-- Listings will be dynamically added here -->
             </div>
@@ -192,30 +187,31 @@
     </div>
 
     <footer>
-        <p>© 2025 Bran The Blessed | A Bartering Revolution</p>
+        <p>© 2025 Bran The Blessed | Barter the Future</p>
         <p>Contact: <a href="mailto:Jacobryandawn@gmail.com">Jacobryandawn@gmail.com</a></p>
     </footer>
 
     <script>
-        // Simple client-side listing management
+        // Function to add a new listing
         function addListing(event) {
             event.preventDefault();
-            const title = document.getElementById('title').value;
-            const description = document.getElementById('description').value;
-            const category = document.getElementById('category').value;
+            const offering = document.getElementById('offering').value;
+            const offerDetails = document.getElementById('offerDetails').value;
             const wanted = document.getElementById('wanted').value;
+            const wantedDetails = document.getElementById('wantedDetails').value;
+            const contact = document.getElementById('contact').value;
 
             const listingGrid = document.getElementById('listingGrid');
             const listingCard = document.createElement('div');
             listingCard.className = 'listing-card';
             listingCard.innerHTML = `
-                <h3>${title}</h3>
-                <p>${description}</p>
-                <p class="category">Category: ${category}</p>
+                <h3>${offering}</h3>
+                <p><strong>Details:</strong> ${offerDetails}</p>
                 <p><strong>Wanted:</strong> ${wanted}</p>
-                <button class="btn" onclick="alert('Contact the poster via email!');">Trade Now</button>
+                <p><strong>Wanted Details:</strong> ${wantedDetails}</p>
+                <p class="contact"><strong>Contact:</strong> ${contact}</p>
             `;
-            listingGrid.appendChild(listingCard);
+            listingGrid.insertBefore(listingCard, listingGrid.firstChild); // Newest listings at the top
 
             // Reset form
             document.getElementById('barterForm').reset();
@@ -223,9 +219,27 @@
 
         // Sample listings to start with
         const sampleListings = [
-            { title: "Handmade Jewelry", desc: "Beautifully crafted necklaces and bracelets.", cat: "Goods", want: "Gardening Tools" },
-            { title: "Web Design Service", desc: "Custom website design, 5 pages.", cat: "Services", want: "Home-cooked Meals" },
-            { title: "Guitar Lessons", desc: "Beginner to intermediate, 1-hour sessions.", cat: "Skills", want: "Bicycle Repair" }
+            {
+                offering: "Samarium (50g)",
+                offerDetails: "High-purity Samarium, lab-grade, sealed.",
+                wanted: "Terbium",
+                wantedDetails: "At least 30g, any condition.",
+                contact: "samariumtrader@example.com"
+            },
+            {
+                offering: "Iron Ingots (10kg)",
+                offerDetails: "Pure iron, forged and ready for use.",
+                wanted: "Copper",
+                wantedDetails: "5kg minimum, wire or scrap.",
+                contact: "ironman123@example.com"
+            },
+            {
+                offering: "Yttrium Powder (100g)",
+                offerDetails: "99.9% pure, ideal for alloys.",
+                wanted: "Gold",
+                wantedDetails: "1oz coin or bar.",
+                contact: "yttriumguy@example.com"
+            }
         ];
 
         sampleListings.forEach(item => {
@@ -233,11 +247,11 @@
             const listingCard = document.createElement('div');
             listingCard.className = 'listing-card';
             listingCard.innerHTML = `
-                <h3>${item.title}</h3>
-                <p>${item.desc}</p>
-                <p class="category">Category: ${item.cat}</p>
-                <p><strong>Wanted:</strong> ${item.want}</p>
-                <button class="btn" onclick="alert('Contact the poster via email!');">Trade Now</button>
+                <h3>${item.offering}</h3>
+                <p><strong>Details:</strong> ${item.offerDetails}</p>
+                <p><strong>Wanted:</strong> ${item.wanted}</p>
+                <p><strong>Wanted Details:</strong> ${item.wantedDetails}</p>
+                <p class="contact"><strong>Contact:</strong> ${item.contact}</p>
             `;
             listingGrid.appendChild(listingCard);
         });
