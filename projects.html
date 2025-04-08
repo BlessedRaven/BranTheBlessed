@@ -16,7 +16,9 @@
         header { padding: 150px 20px 80px; text-align: center; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(10, 0, 21, 0.9)); border-bottom: 2px solid #ff3333; box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); }
         h1 { font-family: 'Cinzel Decorative', cursive; font-size: 5em; color: #ff3333; text-shadow: 0 0 20px #ff3333, 0 0 40px #ff3333; animation: fadeIn 2s ease-in-out; }
         @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-        .content-section { max-width: 1000px; margin: 60px auto; padding: 40px; background: rgba(255, 51, 51, 0.05); border: 2px solid #ff3333; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 51, 51, 0.3); animation: fadeIn 1.5s ease-in-out; }
+        .content-section { max-width: 1000px; margin: 60px auto; padding: 40px; border: 2px solid #ff3333; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 51, 51, 0.3); animation: fadeIn 1.5s ease-in-out; }
+        .content-section:nth-child(odd) { background: rgba(255, 51, 51, 0.05); }
+        .content-section:nth-child(even) { background: rgba(51, 255, 153, 0.05); }
         h2 { font-family: 'Cinzel Decorative', cursive; font-size: 2.5em; color: #ffd700; margin-bottom: 20px; text-shadow: 0 0 10px #ffd700; }
         h3 { font-family: 'Montserrat', sans-serif; font-size: 1.8em; color: #ff9999; margin: 20px 0 10px; }
         p, ul { font-size: 1.2em; line-height: 1.8; color: #ffffff; }
@@ -24,7 +26,7 @@
         li { margin: 10px 0; }
         a { color: #ffd700; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        footer { background: rgba(0, 0, 0, 0.9); padding: 20px; text-align: center; position: fixed; bottom: 0; width: 100%; border-top: 2px solid #ff3333; box-shadow: 0 -5px 20px rgba(255, 51, 51, 0.5); color: #ffffff; font-size: 1em; }
+        footer { background: rgba(0, 0, 0, 0.9); padding: 20px; text-align: center; width: 100%; border-top: 2px solid #ff3333; box-shadow: 0 -5px 20px rgba(255, 51, 51, 0.5); color: #ffffff; font-size: 1em; }
     </style>
 </head>
 <body>
@@ -32,14 +34,11 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#lore">Lore</a></li>
-            <li><a href="index.html#mission">Mission</a></li>
-            <li><a href="index.html#explore">Explore</a></li>
             <li><a href="family-tree.html">Family Tree</a></li>
             <li><a href="astral-game.html">Astral Game</a></li>
             <li><a href="med-beds.html">Med Beds</a></li>
             <li><a href="theory-of-everything.html">Theory of Everything</a></li>
-            <li><a href="pantheism.html">Pantheism</a></li>
+            <li><a href="panchristism.html">Panchristism</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="donate.html">Donate</a></li>
         </ul>
@@ -51,7 +50,8 @@
         <div class="content-section">
             <h2>Pioneering the Future</h2>
             <p>Bran the Blessed drives innovation through transformative projects, each blending science and spirituality to enhance human potential.</p>
-            
+        </div>
+        <div class="content-section">
             <h3>Med Bed / Sensory Chamber</h3>
             <p>A cutting-edge healing pod designed to repair DNA and elevate consciousness.</p>
             <ul>
@@ -60,13 +60,24 @@
                 <li><strong>Healing:</strong> Violet light (400–450 nm) and biofeedback repair DNA, enhance neuroplasticity, and reduce stress by 30%.</li>
                 <li><strong>Astral Link:</strong> Connects to the <a href="astral-game.html">Astral Game</a> via BCI for immersive experiences.</li>
             </ul>
-            
+        </div>
+        <div class="content-section">
             <h3>Astral the Game</h3>
             <p>A virtual reality journey through the astral plane, set in 2030.</p>
             <ul>
                 <li><strong>Gameplay:</strong> Explore seven levels using brainwaves (alpha/theta) and HRV to control psychic powers like telekinesis.</li>
                 <li><strong>Multiplayer:</strong> Co-create ethereal worlds and undertake group quests with "Astral Covenants."</li>
                 <li><strong>Integration:</strong> Enhanced by the <a href="med-beds.html">Med Bed</a>, amplifying immersion and healing.</li>
+            </ul>
+        </div>
+        <div class="content-section">
+            <h3>PAIR: Plant & Augmented Intelligence Recognition</h3>
+            <p>PAIR is more than augmented reality glasses—it’s a revolution in how we interact with the natural world. Powered by advanced AI, PAIR scans plants, fungi, stones, and resources, identifying their chemical compounds and unlocking their potential. From sustainable living to cutting-edge research, we’re fundraising to bring this technology to life. Invest in a future where nature’s secrets are at your fingertips.</p>
+            <ul>
+                <li><strong>Compound Analysis:</strong> PAIR’s AI dissects the molecular makeup of plants and resources—detecting alkaloids, flavonoids, terpenes, and minerals in seconds. Identify caffeine in wild coffee beans, salicylic acid in willow bark, or quartz in a rock sample. Perfect for botanists, chemists, and survivalists seeking precision.</li>
+                <li><strong>Medicinal Breakthroughs:</strong> Discover pharmaceutical goldmines in your backyard. PAIR flags compounds like morphine in poppies or anti-cancer agents in yew trees, providing dosage guidelines and preparation methods. It’s a game-changer for herbalists, doctors, and remote communities needing accessible healthcare.</li>
+                <li><strong>Resource Optimization:</strong> Turn raw materials into solutions. PAIR identifies silica in horsetail for glassmaking, tannins in oak bark for leather tanning, or iron oxides in clay for pigments. Crafters, engineers, and off-grid pioneers can maximize every resource with real-time data.</li>
+                <li><strong>Ecosystem Guardianship:</strong> Monitor plant health and environmental conditions. PAIR detects pesticide residues, fungal infections, or nutrient deficiencies in crops, alongside soil pH and water purity. Farmers, conservationists, and researchers can protect ecosystems with actionable insights.</li>
             </ul>
         </div>
     </main>
