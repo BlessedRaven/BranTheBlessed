@@ -7,26 +7,139 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(180deg, #0a0015, #1a0000, #2b0010); color: #ffffff; overflow-x: hidden; min-height: 100vh; position: relative; }
-        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
-        nav { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.9); padding: 20px 0; z-index: 1000; border-bottom: 2px solid #ff3333; box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 40px; }
-        nav ul li a { color: #ffffff; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 1.2em; text-transform: uppercase; letter-spacing: 2px; transition: color 0.3s, transform 0.3s; }
-        nav ul li a:hover { color: #ffd700; transform: translateY(-3px); }
-        header { padding: 150px 20px 80px; text-align: center; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(10, 0, 21, 0.9)); border-bottom: 2px solid #ff3333; box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); }
-        h1 { font-family: 'Cinzel Decorative', cursive; font-size: 5em; color: #ff3333; text-shadow: 0 0 20px #ff3333, 0 0 40px #ff3333; animation: fadeIn 2s ease-in-out; }
-        @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-        .content-section { max-width: 1000px; margin: 60px auto; padding: 40px; border: 2px solid #ff3333; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 51, 51, 0.3); animation: fadeIn 1.5s ease-in-out; }
-        .content-section:nth-child(odd) { background: rgba(255, 51, 51, 0.05); }
-        .content-section:nth-child(even) { background: rgba(51, 255, 153, 0.05); }
-        h2 { font-family: 'Cinzel Decorative', cursive; font-size: 2.5em; color: #ffd700; margin-bottom: 20px; text-shadow: 0 0 10px #ffd700; }
-        h3 { font-family: 'Montserrat', sans-serif; font-size: 1.8em; color: #ff9999; margin: 20px 0 10px; }
-        p, ul { font-size: 1.2em; line-height: 1.8; color: #ffffff; }
-        ul { list-style: none; padding: 0; margin: 20px 0; }
-        li { margin: 10px 0; }
-        a { color: #ffd700; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer { background: rgba(0, 0, 0, 0.9); padding: 20px; text-align: center; width: 100%; border-top: 2px solid #ff3333; box-shadow: 0 -5px 20px rgba(255, 51, 51, 0.5); color: #ffffff; font-size: 1em; }
+        html, body { 
+            height: 100%; 
+            width: 100%; 
+            background: #0a0015; 
+            color: #ffffff; 
+            font-family: 'Montserrat', sans-serif; 
+            overflow-x: hidden; 
+        }
+        #particles-js { 
+            position: fixed; 
+            width: 100%; 
+            height: 100%; 
+            top: 0; 
+            left: 0; 
+            z-index: -1; 
+            background: linear-gradient(180deg, #0a0015, #1a0000, #2b0010); 
+        }
+        nav { 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            background: rgba(0, 0, 0, 0.9); 
+            padding: 20px 0; 
+            z-index: 1000; 
+            border-bottom: 2px solid #ff3333; 
+            box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); 
+        }
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            flex-wrap: wrap; 
+            padding: 10px; 
+        }
+        nav ul li a { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 1.2em; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            transition: color 0.3s, transform 0.3s; 
+        }
+        nav ul li a:hover { 
+            color: #ffd700; 
+            transform: translateY(-3px); 
+        }
+        header { 
+            padding: 150px 20px 80px; 
+            text-align: center; 
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(10, 0, 21, 0.9)); 
+            border-bottom: 2px solid #ff3333; 
+            box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); 
+        }
+        h1 { 
+            font-family: 'Cinzel Decorative', cursive; 
+            font-size: 5em; 
+            color: #ff3333; 
+            text-shadow: 0 0 20px #ff3333, 0 0 40px #ff3333; 
+            animation: fadeIn 2s ease-in-out; 
+        }
+        @keyframes fadeIn { 
+            0% { opacity: 0; transform: translateY(20px); } 
+            100% { opacity: 1; transform: translateY(0); } 
+        }
+        .content-section { 
+            max-width: 1000px; 
+            margin: 60px auto; 
+            padding: 40px; 
+            border: 2px solid #ff3333; 
+            border-radius: 15px; 
+            box-shadow: 0 0 30px rgba(255, 51, 51, 0.3); 
+            animation: fadeIn 1.5s ease-in-out; 
+        }
+        .content-section:nth-child(odd) { 
+            background: rgba(255, 51, 51, 0.05); 
+        }
+        .content-section:nth-child(even) { 
+            background: rgba(51, 255, 153, 0.05); 
+        }
+        h2 { 
+            font-family: 'Cinzel Decorative', cursive; 
+            font-size: 2.5em; 
+            color: #ffd700; 
+            margin-bottom: 20px; 
+            text-shadow: 0 0 10px #ffd700; 
+        }
+        h3 { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 1.8em; 
+            color: #ff9999; 
+            margin: 20px 0 10px; 
+        }
+        p, ul { 
+            font-size: 1.2em; 
+            line-height: 1.8; 
+            color: #ffffff; 
+        }
+        ul { 
+            list-style: none; 
+            padding: 0; 
+            margin: 20px 0; 
+        }
+        li { 
+            margin: 10px 0; 
+        }
+        a { 
+            color: #ffd700; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        footer { 
+            background: rgba(0, 0, 0, 0.9); 
+            padding: 20px; 
+            text-align: center; 
+            width: 100%; 
+            border-top: 2px solid #ff3333; 
+            box-shadow: 0 -5px 20px rgba(255, 51, 51, 0.5); 
+            color: #ffffff; 
+            font-size: 1em; 
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 3em; }
+            nav ul { gap: 15px; }
+            nav ul li a { font-size: 1em; }
+            .content-section { margin: 30px 15px; padding: 20px; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.5em; }
+            p, ul { font-size: 1em; }
+        }
     </style>
 </head>
 <body>
@@ -35,9 +148,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="family-tree.html">Family Tree</a></li>
-            <li><a href="astral-game.html">Astral Game</a></li>
             <li><a href="med-beds.html">Med Beds</a></li>
-            <li><a href="theory-of-everything.html">Theory of Everything</a></li>
             <li><a href="panchristism.html">Panchristism</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="donate.html">Donate</a></li>
@@ -53,21 +164,23 @@
         </div>
         <div class="content-section">
             <h3>Med Bed / Sensory Chamber</h3>
-            <p>A cutting-edge healing pod designed to repair DNA and elevate consciousness.</p>
+            <p>A cutting-edge healing pod designed to repair DNA and elevate consciousness. The prototype currently uses a Ti:Sapphire laser to emit violet light (400–450 nm) for healing, but we are open to exploring alternative lighting, particularly interested in different crystals producing light in the safe blue-purple zone to optimize therapeutic effects.</p>
             <ul>
                 <li><strong>Structure:</strong> 2.5 m x 1.5 m x 1.2 m aerospace-grade fiberglass pod, ceramic-lined, with UV-resistant coating.</li>
                 <li><strong>Flotation:</strong> 10 inches of purified water with 800 lbs Epsom salt at 35°C for buoyancy.</li>
                 <li><strong>Healing:</strong> Violet light (400–450 nm) and biofeedback repair DNA, enhance neuroplasticity, and reduce stress by 30%.</li>
-                <li><strong>Astral Link:</strong> Connects to the <a href="astral-game.html">Astral Game</a> via BCI for immersive experiences.</li>
+                <li><strong>Astral Link:</strong> Connects to Astral the Game via BCI for immersive experiences.</li>
             </ul>
         </div>
         <div class="content-section">
             <h3>Astral the Game</h3>
-            <p>A virtual reality journey through the astral plane, set in 2030.</p>
+            <p>A virtual reality journey through the astral plane, set in 2030. Astral uses advanced brain-computer interface (BCI) technology to translate brainwaves and physiological signals into in-game actions, allowing players to explore seven levels of the astral plane, from dense emotional landscapes to radiant, thought-responsive realms.</p>
             <ul>
-                <li><strong>Gameplay:</strong> Explore seven levels using brainwaves (alpha/theta) and HRV to control psychic powers like telekinesis.</li>
-                <li><strong>Multiplayer:</strong> Co-create ethereal worlds and undertake group quests with "Astral Covenants."</li>
-                <li><strong>Integration:</strong> Enhanced by the <a href="med-beds.html">Med Bed</a>, amplifying immersion and healing.</li>
+                <li><strong>Brainwave Control:</strong> Alpha (8–12 Hz) and theta (4–8 Hz) brainwaves, detected via EEG, allow players to control psychic abilities like telekinesis, telepathy, and energy manipulation.</li>
+                <li><strong>Heart Rate Variability (HRV):</strong> HRV data adjusts the game’s difficulty and environment, ensuring a personalized experience.</li>
+                <li><strong>Multiplayer:</strong> Co-create ethereal worlds and undertake group quests with "Astral Covenants." Players can build and explore shared astral spaces, where thoughts and emotions shape the environment in real-time.</li>
+                <li><strong>Global Leaderboards:</strong> Compete or collaborate on a global scale, with leaderboards tracking spiritual growth and in-game achievements.</li>
+                <li><strong>Integration:</strong> Enhanced by the <a href="med-beds.html">Med Bed</a>, which provides a sensory deprivation environment to deepen immersion, translating brainwaves and heart signals into seamless in-game actions.</li>
             </ul>
         </div>
         <div class="content-section">
@@ -78,6 +191,28 @@
                 <li><strong>Medicinal Breakthroughs:</strong> Discover pharmaceutical goldmines in your backyard. PAIR flags compounds like morphine in poppies or anti-cancer agents in yew trees, providing dosage guidelines and preparation methods. It’s a game-changer for herbalists, doctors, and remote communities needing accessible healthcare.</li>
                 <li><strong>Resource Optimization:</strong> Turn raw materials into solutions. PAIR identifies silica in horsetail for glassmaking, tannins in oak bark for leather tanning, or iron oxides in clay for pigments. Crafters, engineers, and off-grid pioneers can maximize every resource with real-time data.</li>
                 <li><strong>Ecosystem Guardianship:</strong> Monitor plant health and environmental conditions. PAIR detects pesticide residues, fungal infections, or nutrient deficiencies in crops, alongside soil pH and water purity. Farmers, conservationists, and researchers can protect ecosystems with actionable insights.</li>
+            </ul>
+        </div>
+        <div class="content-section">
+            <h3>Spider: AI-Driven Plant Caretaker</h3>
+            <p>Spider is a compact, spider-shaped robotic AI designed to nurture and protect plants with precision. Leveraging the advanced AI from PAIR, Spider acts as an autonomous caretaker, monitoring and maintaining plant health while addressing environmental challenges in real-time. This technology is achievable with current robotics and AI capabilities, making it a practical solution for sustainable agriculture.</p>
+            <ul>
+                <li><strong>Design:</strong> A small, 10 cm x 10 cm robotic spider with eight articulated legs for mobility, equipped with sensors and a lightweight frame made from biodegradable composites.</li>
+                <li><strong>Plant Monitoring:</strong> Uses PAIR’s AI to measure soil pH, moisture levels, and nutrient content, detecting signs of disease, pest infestations, or fungal infections through visual and chemical analysis.</li>
+                <li><strong>Invasive Species Control:</strong> Identifies and removes invasive species or pests using non-toxic methods, such as targeted micro-sprays of organic repellents or physical removal with its articulated legs.</li>
+                <li><strong>Corrective Actions:</strong> Administers precise amounts of water, nutrients, or natural treatments to fix plant health issues, ensuring optimal growth conditions.</li>
+                <li><strong>Applications:</strong> Ideal for home gardens, commercial farms, and conservation projects, Spider reduces manual labor while promoting sustainable, chemical-free plant care.</li>
+            </ul>
+        </div>
+        <div class="content-section">
+            <h3>Bartering Tokens: Peer-to-Peer Trade on the Blockchain</h3>
+            <p>Bartering Tokens revolutionize trade by enabling peer-to-peer exchanges of goods and services on a blockchain, eliminating the need for fiat currency or traditional cryptocurrencies. Built on smart contracts, this system facilitates direct trades—such as meat for wood, gold for silver, or rare earth metals for pharmaceuticals—ensuring transparency, security, and fairness. Bartering Tokens aim to replace fiat and other cryptos, fostering a decentralized economy rooted in real value.</p>
+            <ul>
+                <li><strong>Blockchain Technology:</strong> Utilizes a secure, decentralized ledger with smart contracts to automate and verify trades, ensuring both parties fulfill their obligations without intermediaries.</li>
+                <li><strong>Token System:</strong> Each token represents a specific good or service, valued by its market demand and utility. For example, a "Dairy Token" might represent 10 liters of milk, while a "Timber Token" represents 1 cubic meter of wood.</li>
+                <li><strong>New Zealand Exports Focus:</strong> Inspired by New Zealand’s top exports, tokens include Dairy (milk powder, butter), Meat (lamb, beef), Timber (logs, sawn wood), Wool, and Horticulture (kiwifruit, apples). Users can trade Dairy Tokens for Timber Tokens, or Meat Tokens for Horticulture Tokens, based on agreed-upon values.</li>
+                <li><strong>Benefits:</strong> Eliminates currency fluctuations, reduces transaction fees, and empowers communities to trade directly, fostering local and global economic resilience.</li>
+                <li><strong>Applications:</strong> Ideal for rural communities, international trade, and off-grid economies, Bartering Tokens create a sustainable trading ecosystem where value is defined by utility, not speculation.</li>
             </ul>
         </div>
     </main>
