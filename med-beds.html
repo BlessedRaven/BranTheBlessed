@@ -7,25 +7,132 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(180deg, #0a0015, #1a0000, #2b0010); color: #ffffff; overflow-x: hidden; min-height: 100vh; position: relative; }
-        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
-        nav { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.9); padding: 20px 0; z-index: 1000; border-bottom: 2px solid #ff3333; box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 40px; }
-        nav ul li a { color: #ffffff; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 1.2em; text-transform: uppercase; letter-spacing: 2px; transition: color 0.3s, transform 0.3s; }
-        nav ul li a:hover { color: #ffd700; transform: translateY(-3px); }
-        header { padding: 150px 20px 80px; text-align: center; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(10, 0, 21, 0.9)); border-bottom: 2px solid #ff3333; box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); }
-        h1 { font-family: 'Cinzel Decorative', cursive; font-size: 5em; color: #ff3333; text-shadow: 0 0 20px #ff3333, 0 0 40px #ff3333; animation: fadeIn 2s ease-in-out; }
-        @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-        .content-section { max-width: 1000px; margin: 60px auto; padding: 40px; border: 2px solid #ff3333; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 51, 51, 0.3); animation: fadeIn 1.5s ease-in-out; }
-        .content-section:nth-child(odd) { background: rgba(255, 51, 51, 0.05); }
-        .content-section:nth-child(even) { background: rgba(51, 255, 153, 0.05); }
-        h2 { font-family: 'Cinzel Decorative', cursive; font-size: 2.5em; color: #ffd700; margin-bottom: 20px; text-shadow: 0 0 10px #ffd700; }
-        p, ul { font-size: 1.2em; line-height: 1.8; color: #ffffff; }
-        ul { list-style: none; padding: 0; margin: 20px 0; }
-        li { margin: 10px 0; }
-        a { color: #ffd700; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer { background: rgba(0, 0, 0, 0.9); padding: 20px; text-align: center; width: 100%; border-top: 2px solid #ff3333; box-shadow: 0 -5px 20px rgba(255, 51, 51, 0.5); color: #ffffff; font-size: 1em; }
+        html, body { 
+            height: 100%; 
+            width: 100%; 
+            background: #0a0015; 
+            color: #ffffff; 
+            font-family: 'Montserrat', sans-serif; 
+            overflow-x: hidden; 
+        }
+        #particles-js { 
+            position: fixed; 
+            width: 100%; 
+            height: 100%; 
+            top: 0; 
+            left: 0; 
+            z-index: -1; 
+            background: linear-gradient(180deg, #0a0015, #1a0000, #2b0010); 
+        }
+        nav { 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            background: rgba(0, 0, 0, 0.9); 
+            padding: 20px 0; 
+            z-index: 1000; 
+            border-bottom: 2px solid #ff3333; 
+            box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); 
+        }
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            flex-wrap: wrap; 
+            padding: 10px; 
+        }
+        nav ul li a { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 1.2em; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            transition: color 0.3s, transform 0.3s; 
+        }
+        nav ul li a:hover { 
+            color: #ffd700; 
+            transform: translateY(-3px); 
+        }
+        header { 
+            padding: 150px 20px 80px; 
+            text-align: center; 
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(10, 0, 21, 0.9)); 
+            border-bottom: 2px solid #ff3333; 
+            box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); 
+        }
+        h1 { 
+            font-family: 'Cinzel Decorative', cursive; 
+            font-size: 5em; 
+            color: #ff3333; 
+            text-shadow: 0 0 20px #ff3333, 0 0 40px #ff3333; 
+            animation: fadeIn 2s ease-in-out; 
+        }
+        @keyframes fadeIn { 
+            0% { opacity: 0; transform: translateY(20px); } 
+            100% { opacity: 1; transform: translateY(0); } 
+        }
+        .content-section { 
+            max-width: 1000px; 
+            margin: 60px auto; 
+            padding: 40px; 
+            border: 2px solid #ff3333; 
+            border-radius: 15px; 
+            box-shadow: 0 0 30px rgba(255, 51, 51, 0.3); 
+            animation: fadeIn 1.5s ease-in-out; 
+        }
+        .content-section:nth-child(odd) { 
+            background: rgba(255, 51, 51, 0.05); 
+        }
+        .content-section:nth-child(even) { 
+            background: rgba(51, 255, 153, 0.05); 
+        }
+        h2 { 
+            font-family: 'Cinzel Decorative', cursive; 
+            font-size: 2.5em; 
+            color: #ffd700; 
+            margin-bottom: 20px; 
+            text-shadow: 0 0 10px #ffd700; 
+        }
+        p, ul { 
+            font-size: 1.2em; 
+            line-height: 1.8; 
+            color: #ffffff; 
+        }
+        ul { 
+            list-style: none; 
+            padding: 0; 
+            margin: 20px 0; 
+        }
+        li { 
+            margin: 10px 0; 
+        }
+        a { 
+            color: #ffd700; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        footer { 
+            background: rgba(0, 0, 0, 0.9); 
+            padding: 20px; 
+            text-align: center; 
+            width: 100%; 
+            border-top: 2px solid #ff3333; 
+            box-shadow: 0 -5px 20px rgba(255, 51, 51, 0.5); 
+            color: #ffffff; 
+            font-size: 1em; 
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 3em; }
+            nav ul { gap: 15px; }
+            nav ul li a { font-size: 1em; }
+            .content-section { margin: 30px 15px; padding: 20px; }
+            h2 { font-size: 2em; }
+            p, ul { font-size: 1em; }
+        }
     </style>
 </head>
 <body>
@@ -34,9 +141,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="family-tree.html">Family Tree</a></li>
-            <li><a href="astral-game.html">Astral Game</a></li>
             <li><a href="med-beds.html">Med Beds</a></li>
-            <li><a href="theory-of-everything.html">Theory of Everything</a></li>
             <li><a href="panchristism.html">Panchristism</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="donate.html">Donate</a></li>
@@ -55,8 +160,8 @@
             <ul>
                 <li><strong>Structure:</strong> A 2.5 m x 1.5 m x 1.2 m pod constructed from aerospace-grade fiberglass, coated with a UV-resistant gel for durability. The interior is lined with a smooth, non-porous ceramic to prevent bacterial growth.</li>
                 <li><strong>Flotation System:</strong> Filled with 10 inches of purified water mixed with 800 lbs of pharmaceutical-grade Epsom salt (magnesium sulfate), maintained at a precise 35°C (95°F) to match skin temperature, ensuring a buoyant, sensory-free environment.</li>
-                <li><strong>Light Therapy:</strong> A Ti:Sapphire laser emits violet light in the 400–450 nm range, pulsed at 4.356 Hz. This frequency resonates with cellular structures, stimulating mitochondrial activity and promoting DNA repair through photobiomodulation.</li>
-                <li><strong>Sound Resonance:</strong> Integrated speakers emit binaural beats at 432 Hz, the "frequency of the universe," to induce theta brainwave states (4–8 Hz), enhancing relaxation, meditation, and astral projection.</li>
+                <li><strong>Light Therapy:</strong> A Ti:Sapphire laser emits violet light in the 400–450 nm range, pulsed at 4.356 Hz. This frequency resonates with cellular structures, stimulating mitochondrial activity and promoting DNA repair through photobiomodulation. The prototype is open to testing alternative lighting, particularly interested in different crystals producing light in the safe blue-purple zone.</li>
+                <li><strong>Sound Resonance:</strong> Using frequencies to induce different brain wave states, theta brainwave states (4–8 Hz) etc, enhancing relaxation, meditation, and astral projection.</li>
                 <li><strong>Biofeedback System:</strong> Electrodes monitor heart rate variability (HRV) and brainwave activity (EEG), adjusting light and sound in real-time to optimize the user’s state of consciousness.</li>
                 <li><strong>Air Quality:</strong> A HEPA filtration system circulates air, maintaining a sterile environment, while a subtle infusion of lavender and frankincense essential oils promotes relaxation.</li>
             </ul>
@@ -64,7 +169,7 @@
         <div class="content-section">
             <h2>Healing Mechanisms</h2>
             <ul>
-                <li><strong>DNA Repair:</strong> The violet light at 4.356 Hz activates base excision repair (BER) and nucleotide excision repair (NER) pathways, correcting DNA damage caused by oxidative stress and aging. This process is amplified by the magnesium-rich water, which supports cellular magnesium levels critical for DNA stability.</li>
+                <li><strong>DNA Repair:</strong> The violet light activates base excision repair (BER) and nucleotide excision repair (NER) pathways, correcting DNA damage caused by oxidative stress and aging. This process is amplified by the magnesium-rich water, which supports cellular magnesium levels critical for DNA stability.</li>
                 <li><strong>Brain Enhancement:</strong> The theta state induced by binaural beats increases neuroplasticity, improving memory, creativity, and emotional regulation. The BCI provides neurofeedback, training the brain to maintain optimal states.</li>
                 <li><strong>Stress Reduction:</strong> The sensory deprivation environment reduces cortisol levels by 30%, as measured in clinical trials, promoting deep relaxation and cellular regeneration.</li>
                 <li><strong>Energy Alignment:</strong> The 432 Hz frequency aligns the body’s energy centers, facilitating a flow of life force, which enhances overall vitality.</li>
@@ -72,7 +177,7 @@
         </div>
         <div class="content-section">
             <h2>Interactions with Astral Game</h2>
-            <p>The Med Bed serves as a portal to the <a href="astral-game.html">Astral VR game</a>, allowing users to enter a fully immersive state. While floating in the tank, the brain-computer interface (BCI) translates brainwaves and heart signals into in-game actions, enabling users to explore the astral plane without physical movement. The violet light and sound resonance enhance the user’s ability to achieve an out-of-body experience, making the transition to the astral plane seamless.</p>
+            <p>The Med Bed serves as a portal to the Astral VR game, allowing users to enter a fully immersive state. While floating in the tank, the brain-computer interface (BCI) translates brainwaves and heart signals into in-game actions, enabling users to explore the astral plane without physical movement. The violet light and sound resonance enhance the user’s ability to achieve an out-of-body experience, making the transition to the astral plane seamless.</p>
         </div>
     </main>
     <footer>
