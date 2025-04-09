@@ -7,25 +7,132 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(180deg, #0a0015, #1a0000, #2b0010); color: #ffffff; overflow-x: hidden; min-height: 100vh; position: relative; }
-        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
-        nav { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.9); padding: 20px 0; z-index: 1000; border-bottom: 2px solid #ff3333; box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 40px; }
-        nav ul li a { color: #ffffff; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 1.2em; text-transform: uppercase; letter-spacing: 2px; transition: color 0.3s, transform 0.3s; }
-        nav ul li a:hover { color: #ffd700; transform: translateY(-3px); }
-        header { padding: 150px 20px 80px; text-align: center; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(10, 0, 21, 0.9)); border-bottom: 2px solid #ff3333; box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); }
-        h1 { font-family: 'Cinzel Decorative', cursive; font-size: 5em; color: #ff3333; text-shadow: 0 0 20px #ff3333, 0 0 40px #ff3333; animation: fadeIn 2s ease-in-out; }
-        @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-        .content-section { max-width: 1000px; margin: 60px auto; padding: 40px; border: 2px solid #ff3333; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 51, 51, 0.3); animation: fadeIn 1.5s ease-in-out; }
-        .content-section:nth-child(odd) { background: rgba(255, 51, 51, 0.05); }
-        .content-section:nth-child(even) { background: rgba(51, 255, 153, 0.05); }
-        h2 { font-family: 'Cinzel Decorative', cursive; font-size: 2.5em; color: #ffd700; margin-bottom: 20px; text-shadow: 0 0 10px #ffd700; }
-        p, ul { font-size: 1.2em; line-height: 1.8; color: #ffffff; }
-        ul { list-style: none; padding: 0; margin: 20px 0; }
-        li { margin: 10px 0; }
-        a { color: #ffd700; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer { background: rgba(0, 0, 0, 0.9); padding: 20px; text-align: center; width: 100%; border-top: 2px solid #ff3333; box-shadow: 0 -5px 20px rgba(255, 51, 51, 0.5); color: #ffffff; font-size: 1em; }
+        html, body { 
+            height: 100%; 
+            width: 100%; 
+            background: #0a0015; /* Fallback dark background */
+            color: #ffffff; 
+            font-family: 'Montserrat', sans-serif; 
+            overflow-x: hidden; 
+        }
+        #particles-js { 
+            position: fixed; 
+            width: 100%; 
+            height: 100%; 
+            top: 0; 
+            left: 0; 
+            z-index: -1; 
+            background: linear-gradient(180deg, #0a0015, #1a0000, #2b0010); /* Ensure dark gradient */
+        }
+        nav { 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            background: rgba(0, 0, 0, 0.9); 
+            padding: 20px 0; 
+            z-index: 1000; 
+            border-bottom: 2px solid #ff3333; 
+            box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); 
+        }
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            flex-wrap: wrap; 
+            padding: 10px; 
+        }
+        nav ul li a { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 1.2em; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            transition: color 0.3s, transform 0.3s; 
+        }
+        nav ul li a:hover { 
+            color: #ffd700; 
+            transform: translateY(-3px); 
+        }
+        header { 
+            padding: 150px 20px 80px; 
+            text-align: center; 
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(10, 0, 21, 0.9)); 
+            border-bottom: 2px solid #ff3333; 
+            box-shadow: 0 5px 20px rgba(255, 51, 51, 0.5); 
+        }
+        h1 { 
+            font-family: 'Cinzel Decorative', cursive; 
+            font-size: 5em; 
+            color: #ff3333; 
+            text-shadow: 0 0 20px #ff3333, 0 0 40px #ff3333; 
+            animation: fadeIn 2s ease-in-out; 
+        }
+        @keyframes fadeIn { 
+            0% { opacity: 0; transform: translateY(20px); } 
+            100% { opacity: 1; transform: translateY(0); } 
+        }
+        .content-section { 
+            max-width: 1000px; 
+            margin: 60px auto; 
+            padding: 40px; 
+            border: 2px solid #ff3333; 
+            border-radius: 15px; 
+            box-shadow: 0 0 30px rgba(255, 51, 51, 0.3); 
+            animation: fadeIn 1.5s ease-in-out; 
+        }
+        .content-section:nth-child(odd) { 
+            background: rgba(255, 51, 51, 0.05); 
+        }
+        .content-section:nth-child(even) { 
+            background: rgba(51, 255, 153, 0.05); 
+        }
+        h2 { 
+            font-family: 'Cinzel Decorative', cursive; 
+            font-size: 2.5em; 
+            color: #ffd700; 
+            margin-bottom: 20px; 
+            text-shadow: 0 0 10px #ffd700; 
+        }
+        p, ul { 
+            font-size: 1.2em; 
+            line-height: 1.8; 
+            color: #ffffff; 
+        }
+        ul { 
+            list-style: none; 
+            padding: 0; 
+            margin: 20px 0; 
+        }
+        li { 
+            margin: 10px 0; 
+        }
+        a { 
+            color: #ffd700; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        footer { 
+            background: rgba(0, 0, 0, 0.9); 
+            padding: 20px; 
+            text-align: center; 
+            width: 100%; 
+            border-top: 2px solid #ff3333; 
+            box-shadow: 0 -5px 20px rgba(255, 51, 51, 0.5); 
+            color: #ffffff; 
+            font-size: 1em; 
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 3em; }
+            nav ul { gap: 15px; }
+            nav ul li a { font-size: 1em; }
+            .content-section { margin: 30px 15px; padding: 20px; }
+            h2 { font-size: 2em; }
+            p, ul { font-size: 1em; }
+        }
     </style>
 </head>
 <body>
@@ -34,9 +141,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="family-tree.html">Family Tree</a></li>
-            <li><a href="astral-game.html">Astral Game</a></li>
             <li><a href="med-beds.html">Med Beds</a></li>
-            <li><a href="theory-of-everything.html">Theory of Everything</a></li>
             <li><a href="panchristism.html">Panchristism</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="donate.html">Donate</a></li>
@@ -48,11 +153,11 @@
     <main>
         <div class="content-section">
             <h2>Welcome to Bran the Blessed</h2>
-            <p>Bran the Blessed embodies a visionary fusion of ancient wisdom and futuristic innovation, rooted in the belief that divinity flows through all existence. This project explores the unity of consciousness, energy, and the cosmos, harnessing advanced technologies like sensory deprivation tanks and virtual reality to elevate humanity. It stands as a beacon for a new era, where science and mysticism converge to unlock the boundless potential within us all.</p>
+            <p>Bran the Blessed is a visionary initiative that bridges ancient wisdom with modern innovation. Our projects include the Med Bed for holistic healing, Astral the Game for immersive virtual reality experiences, PAIR for augmented plant and resource analysis, Spider for AI-driven plant care, and Bartering Tokens for peer-to-peer goods trading on the blockchain. Together, these initiatives aim to elevate human potential and foster a deeper connection with the natural and spiritual worlds.</p>
         </div>
         <div class="content-section">
             <h2>Our Vision</h2>
-            <p>We aim to transcend the boundaries of the physical and spiritual, blending cutting-edge science with timeless understanding. Through initiatives like healing Med Beds, the immersive Astral VR experience, and innovative augmented reality tools, we seek to enhance human consciousness, restore vitality, and create a harmonious future. Bran the Blessed inspires a global awakening, uniting humanity in a shared journey toward enlightenment and infinite possibility.</p>
+            <p>We envision a world where technology and spirituality unite to unlock humanity’s infinite potential. By integrating advanced science with timeless wisdom, we strive to enhance consciousness, promote sustainable living, and build a global community rooted in harmony and innovation. Bran the Blessed is a catalyst for a new era of enlightenment, where every individual can thrive in balance with the cosmos.</p>
         </div>
     </main>
     <footer>
